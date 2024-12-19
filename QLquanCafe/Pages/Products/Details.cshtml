@@ -1,0 +1,15 @@
+﻿@page
+@model QLquanCafe.Pages.Products.DetailsModel
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<h1>Product Details</h1>
+
+<p>Product Name: @Html.DisplayFor(model => model.Product.Name)</p>
+<p>Description: @Html.DisplayFor(model => model.Product.Description)</p>
+<p>Price: @Html.DisplayFor(model => model.Product.Price)</p>
+<p>Category: @Html.DisplayFor(model => model.Product.Category.Name)</p>
+
+<a asp-page="./Edit" asp-route-id="@Model.Product.Id" class="btn btn-primary">Edit</a>
+<a asp-page="./Index" class="btn btn-primary">Back to List</a>
